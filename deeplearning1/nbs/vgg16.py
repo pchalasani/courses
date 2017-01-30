@@ -21,7 +21,7 @@ from keras.preprocessing import image
 vgg_mean = np.array([123.68, 116.779, 103.939], dtype=np.float32).reshape((3,1,1))
 def vgg_preprocess(x):
     x = x - vgg_mean
-    return x[:, ::-1] # reverse axis rgb->bgr
+    return x[::-1] # x[:, ::-1] # reverse axis rgb->bgr
 
 
 class Vgg16():
